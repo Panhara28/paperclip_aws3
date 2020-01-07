@@ -52,40 +52,17 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  # config.paperclip_defaults = {
-  #   storage: :s3,
-  #   s3_protocol: 'https',
-  #   s3_credentials: {
-  #     bucket: "loyosja",
-  #     access_key_id: "QCKVXOLD2EITBX36H3V2",
-  #     secret_access_key: "bg99QzLoFvm5bSfbqX05q1Fl2SgwDzFvFRYQCcY7vUM",
-  #     s3_region: "isgp1",
-  #     endpoint: "https://sgp1.digitaloceanspaces.com"
-  #   }
-  # }
-
-  # config.paperclip_defaults = {
-  #   :storage => :s3,
-  #   :s3_host_name => 'https://sgp1.digitaloceanspaces.com',
-  #   :s3_credentials => {
-  #     :access_key_id => "QCKVXOLD2EITBX36H3V2",
-  #     :secret_access_key => "bg99QzLoFvm5bSfbqX05q1Fl2SgwDzFvFRYQCcY7vUM",
-  #     :s3_region => "isgp1"
-  #   },
-  #   :bucket => 'loyosja'
-  # }
-
   config.paperclip_defaults = {
     storage: :s3,
-    bucket: "loyosja",
+    bucket: "bucket",
     s3_credentials: {
-      access_key_id: "QCKVXOLD2EITBX36H3V2",
-      secret_access_key: "bg99QzLoFvm5bSfbqX05q1Fl2SgwDzFvFRYQCcY7vUM"
+      access_key_id: "accss_key_id",
+      secret_access_key: "secret_access_key"
     },
-    s3_region: "isgp1",
+    s3_region: "region",
     s3_protocol: :https,
     s3_options: {
-      endpoint: "https://sgp1.digitaloceanspaces.com",
+      endpoint: "https://example.example.com",
     },
     path: "/assets/:class/:attachment/:style/:filename",
   }
